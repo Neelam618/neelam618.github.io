@@ -24,8 +24,8 @@ function Navbar() {
     };
 
     return (
-        <Container maxWidth="xl" sx={{ height: { xs: '200px', sm: '250px' } }}>
-            <Box sx={{ display: 'flex', alignItems: 'center', padding: { xs: '1em 0', sm: '1.5em 0', md: '2.5em 1em', lg: '4em 1em' } }}>
+        <Container maxWidth="xl" sx={{ height: { xs: '200px', sm: '220px' } }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', }}>
                 <Box>
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: "8px", sm: "15px" }, marginBottom: { xs: "10px", sm: "1em" } }} >
                         <Avatar src={AvatarSvg} sx={{ width: { xs: '24px', sm: '30px' }, height: { xs: '24px', sm: '30px' } }} />
