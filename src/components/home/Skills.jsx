@@ -1,6 +1,6 @@
 import { Box, Chip, Container, Typography } from '@mui/material'
 import React from 'react'
-import Waves from "../images/skillsbg.svg"
+import Waves from "../../images/skillsbg.svg"
 
 function Skills() {
     return (

@@ -1,7 +1,10 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { purple } from '@mui/material/colors';
 import Home from './components/home/Home';
-
+import { Routes, Route } from "react-router-dom";
+import Layout from './components/Layout';
+import About from './components/about/About';
+import Work from './components/work/Work';
 
 const theme = createTheme({
   palette: {
@@ -23,7 +26,13 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Home />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="work" element={<Work />} />
+        </Route>
+      </Routes>
     </ThemeProvider>
   );
 }

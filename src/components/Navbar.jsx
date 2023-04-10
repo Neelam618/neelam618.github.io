@@ -4,13 +4,18 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AvatarSvg from "../images/avatar.svg"
 import Avatar from '@mui/material/Avatar';
+import Work from './work/Work';
+import About from './about/About';
+import { Link } from 'react-router-dom';
+import Waves from "../images/wave.svg";
+import WavesMobile from "../images/wave2.svg"
+import { Container } from '@mui/system';
 
-const pages = ['Work', 'About', 'Resume'];
+const pages = [{ link: "/work", component: <Work /> }, { link: "/about", component: < About /> }];
 
 function Navbar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -24,11 +29,11 @@ function Navbar() {
     };
 
     return (
-        <Container maxWidth="xl" sx={{ height: { xs: '200px', sm: '220px' } }}>
-            <Box sx={{ display: 'flex', alignItems: 'center', }}>
+        <Box sx={{ backgroundImage: { xs: `url(${WavesMobile})`, md: `url(${Waves})` }, backgroundSize: "cover", backgroundRepeat: "no-repeat" }} >
+            <Container maxWidth="xl" sx={{ height: { xs: '200px', sm: '300px', md: "450px" }, padding: { xs: '1em', sm: '1.5em', md: '2.5em 1em', lg: '4em 2em' }, display: 'flex', alignItems: 'flex-start' }}>
                 <Box>
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: "8px", sm: "15px" }, marginBottom: { xs: "10px", sm: "1em" } }} >
-                        <Avatar src={AvatarSvg} sx={{ width: { xs: '24px', sm: '30px' }, height: { xs: '24px', sm: '30px' } }} />
+                        {/* <Avatar src={AvatarSvg} sx={{ width: { xs: '24px', sm: '30px' }, height: { xs: '24px', sm: '30px' } }} /> */}
 
                         <Typography
                             variant="h5"
@@ -73,6 +78,7 @@ function Navbar() {
                         aria-haspopup="true"
                         onClick={handleOpenNavMenu}
                         color="black"
+                        sx={{ padding: 0 }}
                     >
                         <MenuIcon color='primary' />
                     </IconButton>
@@ -96,7 +102,7 @@ function Navbar() {
                     >
                         {pages.map((page) => (
                             <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center">{page}</Typography>
+                                <Link to={page.link}>{page.component}</Link>
                             </MenuItem>
                         ))}
                     </Menu>
@@ -109,12 +115,13 @@ function Navbar() {
                             onClick={handleCloseNavMenu}
                             sx={{ color: 'black', display: 'block', fontSize: { xs: '12px', md: '14px' } }}
                         >
-                            {page}
+                            <Link to={page.link}>{page.component}</Link>
                         </Button>
                     ))}
                 </Box>
-            </Box>
-        </Container >
+            </Container>
+
+        </Box >
     )
 }
 
