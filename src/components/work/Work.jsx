@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -120,9 +120,9 @@ function Work() {
     };
 
     return (
-        <Container maxWidth="xl" sx={{ padding: { xs: '1em', sm: '1.5em', md: '2.5em 1em', lg: '4em 2em' } }}>
+        <Container maxWidth="xl" sx={{ padding: { xs: '1em', sm: '1.5em', md: '2.5em 1em', lg: '4em 2em' }, marginTop: { md: "-10em", lg: "-12em" } }}>
             <Grid container justifyContent="center"
-                alignItems="center" >
+                alignItems="center" sx={{ padding: { lg: "2em" } }} >
                 {
                     workList.map((work, i) => {
                         return (

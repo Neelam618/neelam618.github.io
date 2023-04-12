@@ -11,7 +11,7 @@ import Waves from "../images/wave.svg";
 import WavesMobile from "../images/wave2.svg"
 import { Container } from '@mui/system';
 
-const pages = [{ link: "/work", component: "Work" }, { link: "/about", component: "About" }];
+const pages = [{ link: "/", component: "Home" }, { link: "/work", component: "Work" }, { link: "/about", component: "About" }];
 
 function Navbar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
