@@ -7,7 +7,7 @@ import Skills from './Skills'
 function Home() {
     return (
         <>
-            <Container maxWidth="lg" sx={{ marginTop: { md: "-10em", lg: "-12em" } }}>
+            <Container maxWidth="lg" sx={{ height: { md: "66vh" }, marginTop: { md: "-10em", lg: "-12em" } }}>
                 <Grid container alignItems="center" justifyContent="center">
                     <Para item md={6}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat quam, corrupti laborum maxime mollitia necessitatibus odit, quis, nihil perferendis sit eaque inventore dicta vitae voluptas aspernatur quod esse incidunt enim?</Para>
                     <Grid item md={6}><Image src={Girl} alt="" /></Grid>
