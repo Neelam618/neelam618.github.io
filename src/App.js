@@ -3,8 +3,8 @@ import { purple } from '@mui/material/colors';
 import Home from './components/home/Home';
 import { Routes, Route } from "react-router-dom";
 import Layout from './components/Layout';
-import About from './components/about/About';
 import Work from './components/work/Work';
+import About from './components/about/About';
 
 const theme = createTheme({
   palette: {
