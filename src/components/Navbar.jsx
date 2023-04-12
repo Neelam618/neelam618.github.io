@@ -6,7 +6,7 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import Waves from "../images/wave.svg";
 import WavesMobile from "../images/wave2.svg"
 import { Container } from '@mui/system';
@@ -100,7 +100,12 @@ function Navbar() {
                     >
                         {pages.map((page, i) => (
                             <MenuItem key={i} onClick={handleCloseNavMenu}>
-                                <Link to={page.link} style={{ color: 'black', display: 'block', textDecoration: "none", fontSize: { xs: '12px', md: '14px' } }}>{page.component}</Link>
+                                <NavLink to={page.link} style={({ isActive }) => {
+                                    return {
+                                        color: isActive ? "purple" : "black",
+                                        textDecoration: "none"
+                                    };
+                                }}>{page.component}</NavLink>
                             </MenuItem>
                         ))}
                         <MenuItem>
@@ -115,7 +120,12 @@ function Navbar() {
                             key={i}
                             onClick={handleCloseNavMenu}
                         >
-                            <Link to={page.link} style={{ color: 'black', display: 'block', textDecoration: "none", fontSize: { xs: '12px', md: '14px' } }}>{page.component}</Link>
+                            <NavLink style={({ isActive }) => {
+                                return {
+                                    color: isActive ? "purple" : "black",
+                                    textDecoration: "none", fontSize: { xs: '12px', md: '14px' }
+                                };
+                            }} to={page.link}>{page.component}</NavLink>
                         </Button>
                     ))}
                     <Button
