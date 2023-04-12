@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import Waves from "../images/wave.svg";
 import WavesMobile from "../images/wave2.svg"
 import { Container } from '@mui/system';
+import Resume from "../Resume.pdf"
 
 const pages = [{ link: "/", component: "Home" }, { link: "/work", component: "Work" }, { link: "/about", component: "About" }];
 
@@ -93,9 +94,12 @@ function Navbar() {
                     >
                         {pages.map((page, i) => (
                             <MenuItem key={i} onClick={handleCloseNavMenu}>
-                                <Link to={page.link}>{page.component}</Link>
+                                <Link to={page.link} style={{ color: 'black', display: 'block', textDecoration: "none", fontSize: { xs: '12px', md: '14px' } }}>{page.component}</Link>
                             </MenuItem>
                         ))}
+                        <MenuItem>
+                            <a href={Resume} style={{ color: 'black', display: 'block', textDecoration: "none", fontSize: { xs: '12px', md: '14px' } }}>Resume</a>
+                        </MenuItem>
                     </Menu>
                 </Box>
 
@@ -104,11 +108,16 @@ function Navbar() {
                         <Button
                             key={i}
                             onClick={handleCloseNavMenu}
-                            sx={{ color: 'black', display: 'block', fontSize: { xs: '12px', md: '14px' } }}
                         >
-                            <Link to={page.link}>{page.component}</Link>
+                            <Link to={page.link} style={{ color: 'black', display: 'block', textDecoration: "none", fontSize: { xs: '12px', md: '14px' } }}>{page.component}</Link>
                         </Button>
                     ))}
+                    <Button
+
+                        onClick={handleCloseNavMenu}
+                    >
+                        <a href={Resume} style={{ color: 'black', display: 'block', textDecoration: "none", fontSize: { xs: '12px', md: '14px' } }}>Resume</a>
+                    </Button>
                 </Box>
             </Container>
 
