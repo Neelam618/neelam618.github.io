@@ -1,6 +1,6 @@
 import { Container, Grid } from '@mui/material'
 import React from 'react'
-import Girl from "../../images/girl.png"
+import Girl from "../../images/girl.svg"
 import styled from 'styled-components'
 import Skills from './Skills'
 

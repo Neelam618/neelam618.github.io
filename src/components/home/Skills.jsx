@@ -9,11 +9,11 @@ function Skills() {
                 <Typography variant="h5" component="h3">Skills</Typography>
                 <Box sx={{ background: "#fff", borderRadius: "10px", padding: { xs: "1em", md: "2em 4em" }, margin: "1em 0" }}>
                     <Box sx={{ display: 'flex', gap: "20px", flexWrap: "wrap" }}>
-                        <Chip label="React" color="secondary" />
-                        <Chip label="JavaScript" color="secondary" />
-                        <Chip label="HTML" color="secondary" />
-                        <Chip label="CSS" color="secondary" />
-                        <Chip label="Typescript" color="secondary" />
+                        <Chip label="React" color="primary" />
+                        <Chip label="JavaScript" color="primary" />
+                        <Chip label="HTML" color="primary" />
+                        <Chip label="CSS" color="primary" />
+                        <Chip label="Typescript" color="primary" />
                     </Box>
                 </Box>
             </Container>

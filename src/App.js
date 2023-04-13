@@ -1,5 +1,4 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { purple } from '@mui/material/colors';
 import Home from './components/home/Home';
 import { Routes, Route } from "react-router-dom";
 import Layout from './components/Layout';
@@ -9,9 +8,10 @@ import About from './components/about/About';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#fff'
-    },
-    secondary: purple
+      main: '#9f34ea',
+      light: '#fff',
+      dark: '#000'
+    }
   },
   typography: {
     fontFamily: 'Lato',

@@ -25,6 +25,7 @@ import NearMeIcon from '@mui/icons-material/NearMe';
 import Grid from '@mui/material/Grid';
 import { Link } from 'react-router-dom';
 import { Chip } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 
 const workList = [
     {
@@ -114,6 +115,7 @@ const ExpandMore = styled((props) => {
 
 function Work() {
     const [expanded, setExpanded] = useState({});
+    const theme = useTheme();
 
     const handleExpandClick = (name) => {
         setExpanded({ ...expanded, [name]: !expanded[name] });
@@ -131,7 +133,7 @@ function Work() {
                                     <CardHeader
                                         title={work.name}
                                     >
-                                        <Chip label="React" color="secondary" />
+                                        <Chip label="React" color="primary" />
                                     </CardHeader>
                                     <CardMedia
                                         component="img"
@@ -143,7 +145,7 @@ function Work() {
                                             {
                                                 work.tags.map((tag, i) => {
                                                     return (
-                                                        <Chip key={tag + i} label={tag} variant='outlined' color="secondary" size='small' />
+                                                        <Chip key={tag + i} label={tag} variant='outlined' color="primary" size='small' />
                                                     )
                                                 })
                                             }
@@ -151,12 +153,12 @@ function Work() {
                                     </CardContent>
                                     <CardActions disableSpacing>
                                         <IconButton aria-label="view code" title='view code'>
-                                            <Link to={work.code} target="_blank">
+                                            <Link to={work.code} target="_blank" style={{ color: theme.palette.primary.main }}>
                                                 <GitHubIcon />
                                             </Link>
                                         </IconButton>
                                         <IconButton aria-label="launch site" title='launch site'>
-                                            <Link to={work.live} target="_blank">
+                                            <Link to={work.live} target="_blank" style={{ color: theme.palette.primary.main }}>
                                                 <NearMeIcon />
                                             </Link>
                                         </IconButton>

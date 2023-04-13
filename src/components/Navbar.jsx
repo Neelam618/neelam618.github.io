@@ -10,12 +10,14 @@ import { NavLink, Link } from 'react-router-dom';
 import Waves from "../images/wave.svg";
 import WavesMobile from "../images/wave2.svg"
 import { Container } from '@mui/system';
-import Resume from "../Resume.pdf"
+import Resume from "../Resume.pdf";
+import { useTheme } from '@mui/material/styles';
 
 const pages = [{ link: "/", component: "Home" }, { link: "/work", component: "Work" }, { link: "/about", component: "About" }];
 
 function Navbar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
+    const theme = useTheme();
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -40,15 +42,16 @@ function Navbar() {
                                 display: 'flex',
                                 fontWeight: 700,
                                 textTransform: "uppercase",
-                                color: '#fff',
+                                color: theme.palette.primary.light,
                                 textDecoration: 'none',
                                 fontSize: { xs: '18px', sm: '22px' }
+
                             }}
                         >
                             Neelam Chavan
                         </Typography>
                     </Box>
-                    <Typography sx={{ textTransform: 'uppercase', color: "#fff", fontSize: { xs: '12px', sm: '14px' }, marginBottom: { xs: '1em' } }}>
+                    <Typography sx={{ textTransform: 'uppercase', color: theme.palette.primary.light, fontSize: { xs: '12px', sm: '14px' }, marginBottom: { xs: '1em' } }}>
                         Frontend Developer
                     </Typography>
                     <Box sx={{ display: 'flex', gap: { xs: '10px', md: '15px' } }}>
@@ -78,10 +81,10 @@ function Navbar() {
                         aria-controls="menu-appbar"
                         aria-haspopup="true"
                         onClick={handleOpenNavMenu}
-                        color="black"
+                        color={`${theme.palette.primary.dark}`}
                         sx={{ padding: 0 }}
                     >
-                        <MenuIcon color='primary' />
+                        <MenuIcon sx={{ color: `${theme.palette.primary.light}` }} />
                     </IconButton>
                     <Menu
                         id="menu-appbar"
@@ -102,14 +105,14 @@ function Navbar() {
                             <MenuItem key={i} onClick={handleCloseNavMenu}>
                                 <NavLink to={page.link} style={({ isActive }) => {
                                     return {
-                                        color: isActive ? "purple" : "black",
+                                        color: isActive ? theme.palette.primary.main : theme.palette.primary.dark,
                                         textDecoration: "none"
                                     };
                                 }}>{page.component}</NavLink>
                             </MenuItem>
                         ))}
                         <MenuItem>
-                            <a href={Resume} style={{ color: 'black', display: 'block', textDecoration: "none", fontSize: { xs: '12px', md: '14px' } }}>Resume</a>
+                            <a href={Resume} style={{ color: theme.palette.primary.dark, display: 'block', textDecoration: "none", fontSize: { xs: '12px', md: '14px' } }}>Resume</a>
                         </MenuItem>
                     </Menu>
                 </Box>
@@ -122,7 +125,7 @@ function Navbar() {
                         >
                             <NavLink style={({ isActive }) => {
                                 return {
-                                    color: isActive ? "purple" : "black",
+                                    color: isActive ? theme.palette.primary.main : theme.palette.primary.dark,
                                     textDecoration: "none", fontSize: { xs: '12px', md: '14px' }
                                 };
                             }} to={page.link}>{page.component}</NavLink>
@@ -132,7 +135,7 @@ function Navbar() {
 
                         onClick={handleCloseNavMenu}
                     >
-                        <a href={Resume} style={{ color: 'black', display: 'block', textDecoration: "none", fontSize: { xs: '12px', md: '14px' } }}>Resume</a>
+                        <a href={Resume} style={{ color: theme.palette.primary.dark, display: 'block', textDecoration: "none", fontSize: { xs: '12px', md: '14px' } }}>Resume</a>
                     </Button>
                 </Box>
             </Container>
