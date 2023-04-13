@@ -1,4 +1,4 @@
-import { Container, Grid } from '@mui/material'
+import { Container, Grid, Typography } from '@mui/material'
 import React from 'react'
 import Girl from "../../images/girl.svg"
 import styled from 'styled-components'
@@ -9,7 +9,11 @@ function Home() {
         <>
             <Container maxWidth="lg" sx={{ height: { md: "66vh" }, marginTop: { md: "-10em", lg: "-12em" } }}>
                 <Grid container alignItems="center" justifyContent="center">
-                    <Para item md={6}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat quam, corrupti laborum maxime mollitia necessitatibus odit, quis, nihil perferendis sit eaque inventore dicta vitae voluptas aspernatur quod esse incidunt enim?</Para>
+                    <Grid item md={6}>
+                        <Typography sx={{ lineheight: '1.75rem', letterSpacing: '0.6px' }}>
+                            Hello there!<br /><br /> I'm Neelam, a skilled self-taught front-end web developer with a passion for creating innovative solutions.<br />Explore my portfolio and get in touch to learn more about my skills and expertise.
+                        </Typography>
+                    </Grid>
                     <Grid item md={6}><Image src={Girl} alt="" /></Grid>
                 </Grid>
             </Container >
@@ -23,12 +27,5 @@ export default Home
 const Image = styled.img`
     width: 100%
 `
-
-const Para = styled(Grid)`
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-    letter-spacing: 0.6px;
-`
-
 
 

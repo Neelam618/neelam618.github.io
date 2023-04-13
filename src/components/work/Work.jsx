@@ -176,7 +176,7 @@ function Work() {
                                             {
                                                 Object.keys(work.description).map((lineNo, i) => {
                                                     return (
-                                                        <List dense={true} key={lineNo + i}>
+                                                        <List dense={true} key={lineNo + i} sx={{ padding: 0 }}>
                                                             <ListItem
                                                                 sx={{ padding: 0 }}
                                                             >
