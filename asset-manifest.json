@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3f427781.css",
+    "main.js": "/static/js/main.733f5a04.js",
+    "static/media/recipe.png": "/static/media/recipe.356e41f3f51d5cc0977c.png",
+    "static/media/movie-fight.png": "/static/media/movie-fight.d00274ad66008c692e7f.png",
+    "static/media/schema-generator.png": "/static/media/schema-generator.528d479963a9b10c787a.png",
+    "static/media/notetaker.png": "/static/media/notetaker.0f21cd5322e51f31265d.png",
+    "static/media/brain2pocket.png": "/static/media/brain2pocket.f75dd1d4e0736e64fef3.png",
+    "static/media/Style-Stage.png": "/static/media/Style-Stage.1781a6cc1143646e9152.png",
+    "static/media/Resume.pdf": "/static/media/Resume.2f83a05a9776a18e35a2.pdf",
+    "static/media/finance-tracker.png": "/static/media/finance-tracker.c24b364dd62474101cd1.png",
+    "static/media/girl.svg": "/static/media/girl.66aa65f11c54967e7e4cde88e0c8f540.svg",
+    "static/media/expensetracker.png": "/static/media/expensetracker.019c10deb7a7b7bbc132.png",
+    "static/media/wave2.svg": "/static/media/wave2.b0cfa7cae13e45edd7f1648dac3fab75.svg",
+    "static/media/wave.svg": "/static/media/wave.3b6a3053e306ed37728e52381f720366.svg",
+    "static/media/skillsbg.svg": "/static/media/skillsbg.bf7519dfec5c8ca2c71a1efee155d2c2.svg",
+    "index.html": "/index.html",
+    "main.3f427781.css.map": "/static/css/main.3f427781.css.map",
+    "main.733f5a04.js.map": "/static/js/main.733f5a04.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3f427781.css",
+    "static/js/main.733f5a04.js"
+  ]
+}
